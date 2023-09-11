@@ -22,6 +22,8 @@ end
 M.atcoder_test = function()
     M.atcoder_download()
     local filename = vim.fn.expand('%:t')
+    local ext = vim.fn.expand('%:e')
+    local command = M.commands[ext] or "UNKNOWN_COMMAND"
     local test_dir = 'test/' .. vim.fn.expand('%:t:r')
     vim.cmd('!oj t -c "' .. command .. ' ' .. filename .. '" -d ' .. test_dir)
 end
@@ -29,6 +31,8 @@ end
 -- コードの提出関数
 M.atcoder_submit = function()
     local filename = vim.fn.expand('%:t')
+    local ext = vim.fn.expand('%:e')
+    local id = M.ids[ext] or "UNKNOWN_ID"
     local url = 'https://atcoder.jp/contests/' .. filename:sub(1, -7) .. '/tasks/' .. filename:sub(1, -5)
     vim.cmd('!oj s -y -l ' .. id .. ' ' .. url .. ' ' .. filename)
 end
