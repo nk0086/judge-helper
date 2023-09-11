@@ -2,7 +2,7 @@
 
 local M = {}
 
-M.init() = function()
+M.init = function()
     M.commands = {
         rs = "cargo run",
     }
