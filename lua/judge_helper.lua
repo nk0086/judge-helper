@@ -2,13 +2,24 @@
 
 local M = {}
 
-M.commands = {
-  rs = "cargo run",
-}
+M.init() = function()
+    M.commands = {
+        rs = "cargo run",
+    }
 
-M.ids = {
-  rs = "5054",
-}
+    M.ids = {
+        rs = "5054",
+    }
+
+    if not vim.fn.isdirectory('test') then
+        vim.cmd('!mkdir test')
+    end
+
+    if vim.fn.executable('oj') == 0 then
+        print("Warning: oj is not installed")
+    end
+
+end
 
 -- テストケースのダウンロード関数
 M.atcoder_download = function()
