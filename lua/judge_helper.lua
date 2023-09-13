@@ -3,11 +3,11 @@
 local M = {}
 
 M.init = function()
-    M.commands = {
+    M.commands = vim.g.judge_helper_commands or {
         rs = "cargo run",
     }
 
-    M.ids = {
+    M.ids = vim.g.judge_helper_ids or{
         rs = "5054",
     }
 
