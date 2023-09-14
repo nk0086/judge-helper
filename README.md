@@ -8,9 +8,11 @@ It simplifies the process of downloading test cases, testing, and submitting sol
 
 ## Functions
 
-- Download: Automatically downloads test cases based on the current file name without needing to manually input the problem URL.
-- Test: Executes test cases using a specified command.
-- Submit: Submits your code based on the current file name without needing to manually input the problems URL.
+|        |                                                                                                                    |
+|--------|--------------------------------------------------------------------------------------------------------------------|
+|Download|Automatically downloads test cases based on the current file name without needing to manually input the problem URL.|
+|Test    |Executes test cases using a specified command.                                                                      |
+|Submit  |Submits your code based on the current file name without needing to manually input the problems URL.                |
 
 
 ## Filename Convention
